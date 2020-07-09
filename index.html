@@ -1,0 +1,424 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @font-face {
+      font-family: mysecondFont;
+      src: url(Fonts/Metropolis-Light.otf);
+      font-family: mythirdFont;
+      src: url(Fonts/Metropolis-Regular.otf);
+      
+    }
+    @media only screen and (max-device-width: 500px) {
+        .container{
+         flex-direction: column !important;
+         max-width: 400px !important;
+         height: 660px !important;
+         margin:1% !important;
+         border-radius: 6px;
+       
+    }
+    a:-webkit-any-link {
+        cursor: none;
+    }
+    #qrcode{
+        height:60px !important;
+        cursor:pointer !important;
+    }
+    .upper-container{
+    height: 220px !important;
+    width:100%;
+    }
+    .upper-container img{
+        height:110% !important;
+    }
+    #mobile{
+        margin-top:-95% !important;
+    }
+    #footer{
+        height:90px !important;
+        background: #9060DE;
+		margin-top:-7% !important;
+    }
+    #websitelink{
+	
+        color:white;
+        font-family: mythirdFont;
+        font-size:15px;
+        text-align:center;
+        margin-top:-5% !important;
+    }
+    #designed{
+        padding:8px !important;
+        margin-top:3% !important;
+    }
+    
+    #shareButton {
+        position: fixed;
+        right: 10px;
+        bottom:30px !important;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        border-radius: 50%;
+        border: 0;
+        outline: 0;
+        background: #9060DE;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+     -webkit-tap-highlight-color: transparent;
+    }
+    #shareButton i {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 1.0em;
+        top: 1.0em;
+        transition: 0.6s;
+    }
+    #shareButton > .container1 {
+        position: absolute;
+        width: 200px;
+        background: hsl(0, 40%, 95%);
+        bottom: 100%;
+        right: 0;
+        padding: 8px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        transform: translateY(10%);
+    }
+
+    }
+
+
+
+
+
+    body{
+    margin: 0px;
+    padding: 0px;
+    background: #f1f1f1;
+    font-family: arial;
+    box-sizing: border-box;
+    }
+    .container{
+    width: 380px;
+    height: 620px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 1px 10px 1px #000;
+    overflow: hidden;
+    display: inline-block;
+    }
+    .upper-container{
+    height: 220px !important;
+    width:100%;
+    }
+    .maintext{
+    border-left: 2px dashed grey;
+      height: 90px;
+      position:relative;
+      top: -56%;
+      left:2%;
+    }
+    .maintext h1{
+      font-family:'Roboto', sans-serif;
+      font-size:30px !important;
+      margin-left:3% !important;
+    }
+    .maintext h3{
+     font-family:'Roboto', sans-serif;
+      font-size:15px !important;
+      margin-left:3% !important;
+      margin-top:-5% !important;
+	  color:black;
+	  font-weight:300 !important;
+    }
+    .maintext h6{
+      font-family:'Roboto', sans-serif;
+      font-size:15px !important;
+      margin-left:3% !important;
+      margin-top:-3% !important;
+      color: #555555;
+    }
+    p{
+      font-family: mythirdFont;
+      font-size:16px !important;
+      margin-left:3% !important;
+      margin-top:-90% !important;
+      text-align: justify;
+      color: #555555;
+      padding: 0 10px 0 0;
+    }
+    .socialmedia{
+        height:100px !important;
+        width:300px !important;
+        
+    }
+    .socialmedia,ul li{
+        list-style-type: none !important;
+        margin-left:-7% !important;
+    }
+    a{
+        text-decoration:none !important;
+    }
+     a img{
+        width:35px !important;
+        height: 35px !important;
+    }
+    li h3{
+        margin-top:-8% !important;
+        margin-left:12%;
+        font-family: mythirdFont;
+        font-size: 16px;
+        color: #555555;
+    }
+    #footer{
+        height:70px;
+        background: #9060DE;
+		margin-top:-2% !important;
+    }
+    #footer h1{
+        color:white;
+        font-family: mythirdFont;
+        font-size:15px;
+        text-align:center;
+    }
+    #footer h4{
+	
+        color:white;
+        font-family: mythirdFont;
+        font-size:15px;
+        text-align:center;
+        margin-top:-5%;
+    }
+
+    </style>
+    <div class="container">
+        <div id="id01" class="w3-modal" style="margin-top:40%;height:60%">
+    <div class="w3-modal-content" style="width:50%;height:70%">
+      <div class="w3-container" >
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright" style="color:black;">&times;</span>
+          	<img src="Asset 10.png" style="width:100%;height:100%;">
+	 </div>
+    </div>
+  </div>
+    
+        
+       <div class="upper-container"><img src="admin.jpg" style="width:100%;height:104%"></div>
+            	<img src="ww-01.png" style="width:120%;height:94%;margin-top:-58%;margin-left:0%">
+	<img id="qrcode" src="Asset 10.png" style="width:60px;height:60px;margin-top:-98%;margin-left:80%;cursor:pointer"  onclick="document.getElementById('id01')       .style.display='block'" >
+					<div class="maintext">
+                <h1>Kishore Babu</h1>
+                <h3>Business Development Executive</h3>
+                <h6>Rekcho</h6>
+            </div>
+		  <p id="mobile">I lead the business team at a top software design company.Email me if you need help developing a software or website</p>
+            <div class="socialmdeia">
+                <ul>
+                    <li><a href="tel:+91 79044 15327"><img src="Asset 7.png"><h3>+91 7904415327</h3></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=+917904415327"><img src="Asset 8.png"><h3>+91 7904415327</h3></a></li>
+                    <li><a href="mailto:shanmugapriyabs06@gmail.com"><img src="Asset 6.png"><h3>kishorebabu696@gmail.com</h3></a></li>
+                    <li><a href="https://www.facebook.com/jnaveen.anban"><img src="Asset 5.png"><h3>@kishorebabu</h3></a></li>
+                  
+                 </ul>
+            </div>
+     <button id="shareButton" onclick="share(this)">
+    <i class="fas fa-share-alt"></i>
+    <i class="fas fa-times"></i>
+    <div class="container1">
+      <div class="addthis_inline_share_toolbox"></div>
+      
+    </div>
+  </button>
+        
+			<div id="footer">
+			    <h1 id="designed">Designed by</h1>
+                <h4 id="websitelink">Aura Design Agency</h4>
+            </div>
+    </div>
+    <style>
+  #shareButton {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  background: #9060DE;
+  color: #fff;
+ 
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+#shareButton i {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 1.0em;
+  top: 1.0em;
+  transition: 0.6s;
+}
+
+#shareButton > .container1 {
+  position: absolute;
+  width: 200px;
+  background: hsl(0, 40%, 95%);
+  bottom: 100%;
+  right: 0;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  transform: translateY(10%);
+}
+
+#shareButton.showAddThisButtons > .container1 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.addthis_inline_share_toolbox,
+.addthis_sharing_toolbox {
+  text-align: right;
+}
+
+#shareButton:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  border: 0 solid #fff;
+  border-radius: 50%;
+  border-width: 2px 0 0 2px;
+  border-left-color: transparent;
+  animation: loading-share-buttons 1s cubic-bezier(0.4, 0.6, 0.4, 0.6) infinite;
+  animation-play-state: paused;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#shareButton.loading:after {
+  animation-play-state: running;
+  opacity: 1;
+}
+
+#shareButton i.fa-times {
+  opacity: 0;
+  left: 1.22em;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#shareButton.showAddThisButtons i.fa-share-alt {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#shareButton.showAddThisButtons i.fa-times {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+
+@keyframes loading-share-buttons {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+  </style>
+<script>
+var AddThisJSLoaded = false; //AddThis not loaded yet
+var clickedOnShare = false; //share button is not clicked
+
+//replace with your publisher ID
+//it's in your profile setting
+var AddThisPubID = "ra-5b056b31a239b6eb";
+var AddThisJS = "//s7.addthis.com/js/300/addthis_widget.js#pubid=" + AddThisPubID;
+
+function share(button) {
+  if (navigator.share) {
+    //check if Web Share API is supported by the browser
+    var url = document.location.href;
+    var title = document.getElementsByTagName("title")[0].innerHTML;
+    var description = document
+      .querySelector("meta[name=description]")
+      .getAttribute("content");
+
+    navigator.share({
+      title: title,
+      text: description,
+      url: url
+    });
+  } else {
+    if (!AddThisJSLoaded && !clickedOnShare) {
+      //when AddThis not loaded and share button isn't clicked
+      clickedOnShare = true; //share button is clicked
+      showLoading(button);
+      shareByAddThis(button);
+    } else {
+      toggleAddThisButtons(button);
+    }
+  }
+}
+
+function shareByAddThis(button) {
+  var script = document.createElement("script");
+  script.async = true;
+  script.src = AddThisJS;
+
+  script.onload = function() {
+    clickedOnShare = false; //AddThis JS is loaded
+    addthis.user.ready(function(data) {
+      AddThisJSLoaded = true; //AddThis loaded and ready to use
+      hideLoading(button);
+      showAddThisButtons(button);
+    });
+  };
+
+  script.onerror = function() {
+    clickedOnShare = false; //AddThis JS failed to load
+    hideLoading(button);
+  };
+
+  document.body.appendChild(script);
+}
+
+function showLoading(button) {
+  button.classList.add("loading");
+}
+
+function hideLoading(button) {
+  button.classList.remove("loading");
+}
+
+function showAddThisButtons(button) {
+  button.classList.add("showAddThisButtons");
+}
+
+function toggleAddThisButtons(button) {
+  button.classList.toggle("showAddThisButtons");
+}
+
+</script>
+
+
